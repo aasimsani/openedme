@@ -1,2 +1,2 @@
-# opensesam.es
+# openedme
 A simple link opening tracker
