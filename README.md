@@ -17,3 +17,7 @@ This service uses the Mailjet API to send emails but you can modify the ```send_
 
 1. Create a database to store URLs and thus make your own URL shortner. - Requires Patreon funding to be ($10/month)
 2. Allow users to see via webpage how many opens there have been for the URL via a database. - Requires Patreon funding to be ($10/month)
+
+### How do I use it myself?
+
+Just add your domain name where you're running this app and your MailJet credentials to the ```config.py``` file
