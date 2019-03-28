@@ -5,7 +5,7 @@ A simple link opening tracker
 It sends you an email when someone opens the link you send them.
 
 ### Can I anonymize my link?
-Yes, just use bit.ly (TBD as a feature)
+Yes! We use TinyURL to shortern and anonimize the link
 
 
 ### Email API
