@@ -1,6 +1,8 @@
 # Opened Me
 A simple link opening tracker
 
+Live here: https://openedme.com
+
 ### What does openedme do?
 It sends you an email when someone opens the link you send them.
 
