@@ -33,6 +33,7 @@ def redirect_to():
     email = request.args['he']
 
     #Send email
+    
 
     decrypted = decrypt_hash(email,link)
 
