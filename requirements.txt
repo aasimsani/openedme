@@ -1,0 +1,5 @@
+flask
+Flask-WTF
+Flask-Mail
+mailjet_rest
+beautifulsoup4
