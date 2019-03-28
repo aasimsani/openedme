@@ -10,7 +10,8 @@ Yes! We use TinyURL to shortern and anonimize the link
 
 ### Email API
 
-This service uses the (https://www.mailjet.com)[Mailjet] API to send emails but you can modify the ```send_email.py``` file to send via whichever provider you want.
+This service uses the [Mailjet's API](https://mailjet.com "Mailjet's Homepage")
+API to send emails but you can modify the ```send_email.py``` file to send via whichever provider you want.
 
 
 ### Potential enhancements
