@@ -1,8 +1,26 @@
 <html>
-    This text should load
-    <form action="{{url_for('got_link')}}" method="POST">
-            <p>Email <input type = "text" name = "email" /></p>
-            <p>Link <input type = "text" name = "link" /></p>
-            <p><input type = "submit" value = "submit" /></p>
-    </form>
+    <head>
+        <meta charset="UTF-8">
+        <title>A simple link tracker</title>
+        <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        
+        
+    </head>
+
+    <div class="container">
+        <div class="content">
+            <h1>Opened Me</h1>
+            <h2>A simple link open tracker</h2>
+            <h4>Just enter your email and your link. </h4>
+            <h4> We'll send you an email when someone opens it!</h4>
+            <form action="{{url_for('got_link')}}" method="POST">
+                    <p><input class="tbox" type = "text" name = "email" placeholder="Email"/></p>
+                    <p><input class="tbox" type = "text" name = "link" placeholder="Link"/></p>
+                    <p><button class="btn" type = "submit" value = "submit">Submit</button></p>
+            </form>
+        </div>
+    </div>
 </html>

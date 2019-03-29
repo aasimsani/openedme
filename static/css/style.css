@@ -1,0 +1,77 @@
+body{
+  font-family: Comfortaa;
+  font: Comfortaa;
+  background: #D7EEEF;
+  color:#1D3557;
+}
+
+
+.tbox{
+
+  @extend .transition;
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 4em 0.5em 0.5em;
+  border: 0;
+  border-radius: 30px;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  background-color: transparent;
+  border: 2px solid #457B9D;
+  color: #1D3557;
+}
+
+.btn{
+
+  @extend .transition;
+  position: relative;
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  border: 0;
+  border-radius: 30px;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  background-color: transparent;
+  border: 2px solid #457B9D;
+  color: #1D3557;
+
+  
+
+}
+
+.btn:hover {
+  background-color: #457B9D;
+  color: #F1FAEE;
+  border: 1px solid #1D3557;
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.15);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+
+.content {
+  margin: auto;
+  max-width: 50%;
+  text-align: center;
+  padding:10%;
+  font-family: inherit;
+}
+
+.container{
+  height: 100%;
+  width: 100%;
+  font-family: inherit;
+}
