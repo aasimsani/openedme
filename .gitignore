@@ -4,3 +4,4 @@
 config-private.py
 config.py
 .vscode
+.DS_Store
