@@ -51,6 +51,15 @@ def redirect_to():
     continent = j['continent_name']
     country = j['country_name']
 
+    if city == None:
+        city = ""
+    
+    if continent = None:
+        continent = ""
+    
+    if country == None:
+        country = ""
+
     location = continent+"/"+country+"-"+city
 
     email = decrypted['email']
