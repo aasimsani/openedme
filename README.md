@@ -15,6 +15,10 @@ Yes! We use TinyURL to shortern and anonimize the link
 This service uses the [Mailjet's API](https://mailjet.com "Mailjet's Homepage")
 API to send emails but you can modify the ```send_email.py``` file to send via whichever provider you want.
 
+### Location API
+
+I use [IP Stack's API](https://ipstack.com) to get the location of the people who click the link but you can modify the ```send_email.py``` file to send via whichever provider you want.
+
 
 ### Potential enhancements
 
