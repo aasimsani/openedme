@@ -3,6 +3,7 @@ body{
   font: Comfortaa;
   background: #D7EEEF;
   color:#1D3557;
+  overflow: hidden;
 }
 
 
@@ -15,6 +16,7 @@ body{
   border: 0;
   border-radius: 30px;
   text-align: left;
+  width: 80%;
   white-space: nowrap;
   cursor: pointer;
   font-family: 'Open Sans', sans-serif;
@@ -74,4 +76,25 @@ body{
   height: 100%;
   width: 100%;
   font-family: inherit;
+}
+
+.logo{
+  display: inline-block;
+  margin: 1em;
+  width: 3em;
+}
+
+.topbar{
+  display: inline;
+  
+}
+
+.support-link{
+  align-self: right;
+  display: inline-block;
+  float:right;
+  padding:0% 0% 0% 0%;
+  color: inherit;
+  margin: 1em;
+  
 }
