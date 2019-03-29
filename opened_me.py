@@ -66,7 +66,7 @@ def redirect_to():
     if region == None:
         region = ""
 
-    location = continent+"/"+country+"-"+region+"/"+city
+    location = continent+"/"+country+" - "+region+"/"+city
 
     email = decrypted['email']
     link = decrypted['link']
@@ -77,7 +77,7 @@ def redirect_to():
 
 
     #Send email
-    #send_email_mj(email,link,location)
+    send_email_mj(email,link,location)
 
 
 

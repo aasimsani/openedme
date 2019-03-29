@@ -24,9 +24,9 @@ def send_email_mj(email,link,location):
                             ],
                             "Subject": "Your link was opened by someone in %s." % location,
                             "TextPart": """
-                                        Your link %s was opened.
+                                        Your link %s was opened by someone in %s.
                                         Please support Opened Me via Patreon: https://patreon.com/openedme
-                                        """ % link,
+                                        """ % (link,location),
                             "HTMLPart": ""
                     }
             ]
