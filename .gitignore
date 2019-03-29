@@ -2,3 +2,4 @@
 /app
 /__pycache__
 config-private.py
+config.py
