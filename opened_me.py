@@ -43,13 +43,17 @@ def redirect_to():
     decrypted = decrypt_hash(email,link)
     
     
-    url = "http://api.ipstack.com/"+"{}".format(request.remote_addr)+"?access_key=%s" % IPSTACK_KEY
+    url = "http://api.ipstack.com/"+"{}".format(request.headers.get('X-Forwarded-For'))+"?access_key=%s" % IPSTACK_KEY
+
     r = requests.get(url)
     j = json.loads(r.text)
+    print(j)
+    
     
     city = j['city']
     continent = j['continent_name']
     country = j['country_name']
+    region = j['region_name']
 
     if city == None:
         city = ""
@@ -60,7 +64,10 @@ def redirect_to():
     if country == None:
         country = ""
 
-    location = continent+"/"+country+"-"+city
+    if region == None:
+        region = ""
+
+    location = continent+"/"+country+"-"+region+"/"+city
 
     email = decrypted['email']
     link = decrypted['link']
@@ -71,7 +78,7 @@ def redirect_to():
 
 
     #Send email
-    send_email_mj(email,link,location)
+    #send_email_mj(email,link,location)
 
 
 
