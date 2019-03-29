@@ -47,7 +47,6 @@ def redirect_to():
 
     r = requests.get(url)
     j = json.loads(r.text)
-    print(j)
     
     
     city = j['city']
