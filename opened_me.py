@@ -54,7 +54,7 @@ def redirect_to():
     if city == None:
         city = ""
     
-    if continent = None:
+    if continent == None:
         continent = ""
     
     if country == None:
