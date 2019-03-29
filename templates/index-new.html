@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simple landing page cover</title>
+  <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+body {
+  overflow-x: hidden;
+  overflow-style: none;
+}
+
+
+
+
+
+
+.logocon {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  width: 100vw;
+  height: 100vh;
+  background: #e61919;
+  animation: color 30s linear infinite;
+  user-select: none;
+  position: absolute;
+  z-index: 3;
+}
+.menu {
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+  height: 50px;
+  background: rgba(0,0,0,0.85);
+  color: #ccc;
+  text-align: center;
+  line-height: 50px;
+  font: 300 32px Comfortaa;
+}
+a {
+  padding: 5px 10px;
+  border: 1px solid;
+  border-radius: 30px;
+  font-family: Comfortaa;
+  color: #f39;
+  transition: background 0.3s;
+}
+a:hover {
+  background: #f39;
+  color: #fff;
+  border: 0;
+}
+.logo {
+  font: 300 150px Comfortaa;
+  color: #fff;
+  cursor: default;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.hint {
+  position: fixed;
+  z-index: 4;
+  bottom: 60vh;
+  width: 100vw;
+  text-align: center;
+  color: rgba(255,255,255,0.6);
+  font: 300 30px Comfortaa;
+}
+
+.form {
+  position: fixed;
+  z-index: 4;
+  bottom: 10vh;
+  width: 100vw;
+  text-align: center;
+  color: rgba(255,255,255,0.6);
+  font: 300 30px Comfortaa;
+}
+
+.content {
+  padding: 30px;
+  position: relative;
+  top: 20vh;
+  height: 200vh;
+  font: 16px Ubuntu;
+}
+@-moz-keyframes color {
+  0% {
+    background: #e61919;
+  }
+  25% {
+    background: #80e619;
+  }
+  50% {
+    background: #19e5e6;
+  }
+  75% {
+    background: #7f19e6;
+  }
+  100% {
+    background: #e61919;
+  }
+}
+@-webkit-keyframes color {
+  0% {
+    background: #e61919;
+  }
+  25% {
+    background: #80e619;
+  }
+  50% {
+    background: #19e5e6;
+  }
+  75% {
+    background: #7f19e6;
+  }
+  100% {
+    background: #e61919;
+  }
+}
+@-o-keyframes color {
+  0% {
+    background: #e61919;
+  }
+  25% {
+    background: #80e619;
+  }
+  50% {
+    background: #19e5e6;
+  }
+  75% {
+    background: #7f19e6;
+  }
+  100% {
+    background: #e61919;
+  }
+}
+@keyframes color {
+  0% {
+    background: #e61919;
+  }
+  25% {
+    background: #80e619;
+  }
+  50% {
+    background: #19e5e6;
+  }
+  75% {
+    background: #7f19e6;
+  }
+  100% {
+    background: #e61919;
+  }
+}
+
+    </style>
+<script>
+  $(document).ready(function(){
+   $('.nice-textbox').blur(function() {
+        if($(this).val().length === 0){
+          $('.nice-label').removeClass("focus");
+        }
+        else { returns; }
+      })
+      .focus(function() {
+        $('.nice-label').addClass("focus")
+      });
+});
+</script>
+
+<style>
+
+*{box-sizing: border-box;}
+
+html, body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #3cad7e;
+  font-family: 'Arial', sans-serif;
+}
+
+.container{  
+  h1{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+  }
+}
+
+.nice-wrap{
+  position: relative;
+  width: 500px;
+  height: 100px;
+ 
+  margin: 0 auto;
+}
+
+.nice-label{
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  font-size: 16px;
+  color: #a0a0a0;
+  transition: all 0.25s ease;
+  
+  &.focus{
+    top: -25px;
+    left: 5px;
+    font-size: 14px;
+    color: #fff;
+  }
+}
+
+.nice-textbox{
+  position: relative;
+  display: block;
+  width: 500px;
+  margin-top: 50px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #a0a0a0;
+  outline: none;
+}
+</style>
+
+
+<style>
+
+$green: #1ECD97;
+$gray: #bbbbbb;
+.button-container {
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-left: -65px;
+  margin-top: -20px;
+  width: 130px;
+  height: 40px;
+  text-align: center;
+}
+button {
+  outline:none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius:40px;
+  background: #fff;
+  border: 2px solid $green;
+  color:$green;
+  letter-spacing:1px;
+  text-shadow:0;
+  font:{
+    size:12px;
+    weight:bold;
+  }
+  cursor: pointer;
+  transition: all 0.25s ease;
+  &:hover {
+    color:white;
+    background: $green;
+  }
+  &:active {
+    //letter-spacing: 2px;
+    letter-spacing: 2px ;
+  }
+  &:after {
+    content:"SUBMIT";
+  }
+}
+.onclic {
+  width: 40px;
+  border-color:$gray;
+  border-width:3px;
+  font-size:0;
+  border-left-color:$green;
+  animation: rotating 2s 0.25s linear infinite;
+
+  &:after {
+    content:"";
+  }
+  &:hover {
+    color:$green;
+    background: white;
+  }
+}
+.validate {
+  font-size:13px;
+  color: white;
+  background: $green;
+  &:after {
+    font-family:'FontAwesome';
+    content:"\f00c";
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
+
+<script>
+
+$(function() {
+  $( "#button" ).click(function() {
+    $( "#button" ).addClass( "onclic", 250, validate);
+  });
+
+  function validate() {
+    setTimeout(function() {
+      $( "#button" ).removeClass( "onclic" );
+      $( "#button" ).addClass( "validate", 450, callback );
+    }, 2250 );
+  }
+    function callback() {
+      setTimeout(function() {
+        $( "#button" ).removeClass( "validate" );
+      }, 1250 );
+    }
+  });
+</script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  
+<!--cover w/ skrollr values (for example data-100 for styles at 100 pixels scroled)-->
+<div class="logocon" data-0="opacity: 1; display: flex" data-99="opacity: 0; display: none" data-100="display: none">
+  <div class="logo">Opened Me</div>
+<div class="form" data-0="bottom: 2vh" data-100="bottom: -25px">
+  <form>
+      <div class="container">
+          <div class="hint" data-0="bottom: 2vh" data-100="bottom: -25px">A simple link tracker!</div>
+          <h1>Just enter your link and your email</h1>
+          <div class="nice-wrap">
+            <input class="nice-textbox" type="text" name = "email"/>
+            <label class="nice-label" for="Username">Email</label>
+          </div>
+          <div class="nice-wrap">
+            <input class="nice-textbox" type="text" name = "link"/>
+            <label class="nice-label" for="Username">Link</label>
+          </div>
+          <div class="button-container">
+              <button type="submit" id="button">Submit</button>
+          </div>
+      </div>
+  </form>
+</div>
+</div>
+<!--page contents below-->
+<div class="menu">Opened Me</div>
+<div class="content">Another take on the landing page cover: <a href="https://codepen.io/Ovoce/pen/buIeE" target="_blank">cave</a> Now with another stupid name...</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.26/skrollr.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

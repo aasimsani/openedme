@@ -4,8 +4,10 @@ from encryption import generate_hash, decrypt_hash
 
 from flask import Flask,request, render_template,url_for,redirect
 from send_email import send_email_mj
-from config import DOMAIN_NAME
+from config import DOMAIN_NAME,IPSTACK_KEY
 from make_tiny import make_tiny_link
+import requests
+import json
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'you-will-never-guess'
@@ -39,6 +41,17 @@ def redirect_to():
     email = request.args['he']
 
     decrypted = decrypt_hash(email,link)
+    
+    
+    url = "http://api.ipstack.com/"+"{}".format(request.remote_addr)+"?access_key=%s" % IPSTACK_KEY
+    r = requests.get(url)
+    j = json.loads(r.text)
+    
+    city = j['city']
+    continent = j['continent_name']
+    country = j['country_name']
+
+    location = continent+"/"+country+"-"+city
 
     email = decrypted['email']
     link = decrypted['link']
@@ -49,7 +62,7 @@ def redirect_to():
 
 
     #Send email
-    send_email_mj(email,link)
+    send_email_mj(email,link,location)
 
 
 
