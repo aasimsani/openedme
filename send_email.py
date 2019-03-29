@@ -6,7 +6,7 @@ api_secret = MJ_APIKEY_PRIVATE
 
 
 
-def send_email_mj(email,link):
+def send_email_mj(email,link,location):
 
     mailjet = Client(auth=(api_key, api_secret), version='v3.1')
     data = {
@@ -22,7 +22,7 @@ def send_email_mj(email,link):
                                             "Name": ""
                                     }
                             ],
-                            "Subject": "Your link was opened.",
+                            "Subject": "Your link was opened by someone in %s." % location,
                             "TextPart": """
                                         Your link %s was opened.
                                         Please support Opened Me via Patreon: https://patreon.com/openedme
