@@ -22,7 +22,7 @@ I use [IP Stack's API](https://ipstack.com) to get the location of the people wh
 
 ### Google Analytics tracking
 
-In order to enable Google analytics tracking please put your tracking ID in the header of in each file in ```templates/```
+In order to enable Google analytics tracking please put your tracking ID in the ```GA_TRACKING``` variable in ```config.py``` 
 
 ### Potential enhancements
 
