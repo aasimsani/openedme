@@ -4,7 +4,7 @@ from encryption import generate_hash, decrypt_hash
 
 from flask import Flask,request, render_template,url_for,redirect
 from send_email import send_email_mj
-from config import DOMAIN_NAME,IPSTACK_KEY
+from config import DOMAIN_NAME,IPSTACK_KEY,GA_TRACKING
 from make_tiny import make_tiny_link
 import requests
 import json
@@ -15,7 +15,7 @@ app.config['SECRET_KEY'] = 'you-will-never-guess'
 
 @app.route("/",methods=['GET','POST'])
 def home():
-    return render_template("index.html")
+    return render_template("index.html",tracking_id=GA_TRACKING)
 
 
 @app.route("/gotlink",methods=['GET','POST'])
@@ -30,7 +30,7 @@ def got_link():
     redirect_url = url_for('redirect_to')
     tiny_url = make_tiny_link(hash_data,redirect_url,domain)
 
-    return render_template("gotlink.html",form=form, link=tiny_url)
+    return render_template("gotlink.html",form=form, link=tiny_url,tracking_id=GA_TRACKING)
 
 
 @app.route("/redirect",methods=['GET','POST'])
