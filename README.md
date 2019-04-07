@@ -20,6 +20,10 @@ API to send emails but you can modify the ```send_email.py``` file to send via w
 I use [IP Stack's API](https://ipstack.com) to get the location of the people who click the link but you can modify the ```send_email.py``` file to send via whichever provider you want.
 
 
+### Google Analytics tracking
+
+In order to enable Google analytics tracking please put your tracking ID in the header of in each file in ```templates/```
+
 ### Potential enhancements
 
 1. Create a database to store URLs and thus make your own URL shortner. - Requires Patreon funding to be ($10/month)
@@ -37,6 +41,6 @@ You can support the service by helping with the server costs by going here:  htt
 Please feel free to develop this project more and fix issues as you see them!
 
 
-### Colorscheme
+### Color scheme
 
 ![Colorscheme](static/images/colorscheme.png)

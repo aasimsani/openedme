@@ -1,5 +1,15 @@
 <html>
     <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{tracking_id}}"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{tracking_id}}');
+        </script>
+
         <meta charset="UTF-8">
         <title>A simple link tracker</title>
         <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,300' rel='stylesheet' type='text/css'>
@@ -32,7 +42,7 @@
             <h1>Opened Me</h1>
             <h2>A simple link open tracker</h2>
             <h4>Just enter your email and your link. </h4>
-            <h4> We'll send you an email when someone opens it!</h4>
+            <h4> Use our new link and we'll send you an email when someone opens it!</h4>
             <form action="{{url_for('got_link')}}" method="POST">
                     <p><input class="tbox" type = "text" name = "email" placeholder="Email"/></p>
                     <p><input class="tbox" type = "text" name = "link" placeholder="Link"/></p>
